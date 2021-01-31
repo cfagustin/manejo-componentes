@@ -1,0 +1,228 @@
+
+
+body{
+    /*cambiar la fuente*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Color de las fuentes*/
+    color: white;
+    /*Para que el degradado quede fijo en todo el sitio*/
+    height: 100%;
+    /*Color de fondo*/
+    background-color: black;
+}
+
+
+/* DATOS GLOBALES */
+.contenedor{
+  /**/
+  width: 95%;
+  /*Altura maxima*/
+  max-width: 120rem;
+  /*centrar el contenido en el contenedor*/
+  margin-left: auto;
+  /**/
+  margin-right: auto;
+  
+}
+
+/*Estilo al h1*/
+h1{
+  /*El tipo de fuente*/
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+
+
+img {
+  /*Anchura maxima*/
+  max-width: 100%;
+}
+
+
+
+
+/*#################################################################3*/
+
+
+
+
+/*HEADER 1*/
+.site-header.inicio{
+  /*Agregar imagen de fondo*/
+  background-image: url(../../images/imagenHeader.jpg);
+  /*Altura de la imagen*/
+  height: 100vh;
+  /*Posicionar la imagen*/
+  background-position: center center;
+  /*Mostrar la imagen mostrando el ancho y alto disponible */
+  background-size: cover;
+}
+
+
+/*CARDS*/
+.cards {
+  position: relative;
+}
+
+.contenido-cards{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/*Fondo transparente Cards*/
+.programa-cards{
+  background-color: rgba(43, 42, 42, 0.8);
+  padding: 15px;
+  margin-top: 100px;
+}
+
+
+
+
+.entrada{
+  /*Separacion o espacio de las imagenes hacia abajo*/
+  margin-bottom: 2rem;
+}
+
+
+
+.entrada:last-of-type {
+  /*Eliminar la franja naranja del ultimo elemento*/
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .entrada .imagen {
+      /*Ancho de la imagen*/
+      flex-basis: 40%;
+  }
+  .entrada .entrada-texto {
+      /*Ancho al texto*/
+      flex-basis: calc(60% - 3rem);
+  }
+}
+
+
+.parrafo-span{
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  display: flex;
+}
+
+.parrafo-span1{
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.4rem;
+}
+
+
+.parrafo-span2{
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.4rem;
+  display: flex;
+}
+
+
+.btn{
+  color: rgb(179, 6, 6);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: ;
+}
+
+
+.span-u{
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.parrafoTV{
+  background-color: rgb(122, 120, 120);
+  padding: 5px;
+}
+
+
+
+/*Margen arriba*/
+
+.lista-movies {
+  padding: 0;
+  /*Quitar las viñetas de la lista*/
+  list-style: none;
+}
+
+
+/*Para que no se desfase las imagene de los movies
+2n+1 significa */
+
+.lista-movies li:nth-child(2n+1) {
+  clear: both
+}
+
+
+/**/
+
+.lista-movies li {
+  /*Coloca los movie en 3 columnas uno a la par de otro*/
+  float: left;
+  /*anchura solo deja dos columnas o dos movies uno a la par de otro*/
+  width: 20%;
+  /*Separacion entre movie*/
+  padding: 0px;
+  /*Centrar el texto de cada movie*/
+  text-align: center;
+}
+
+
+
+
+.lista-movies li p {
+  /*Texto en negrita*/
+  font-weight: bold;
+  /*Tamaño del texto*/
+  font-size: 20px;
+  margin: 10px 0 0 0;
+}
+
+
+
+
+/**/
+
+@media (min-width: 768px) {
+  .lista-movies li {
+      /*anchura solo deja dos columnas o dos movies uno a la par de otro*/
+      width: 33.3%;
+  }
+  .lista-movies li:nth-child(2n+1) {
+      clear: unset
+  }
+  .lista-movies li:nth-child(3n+1) {
+      clear: both
+  }
+}
+
+
+/*Colocar un borde a cada movie*/
+
+.lista-movies li img {
+  /*rgba(128,1,195, .45): el .45 sera la transparencia que se le coloca al border */
+  border: 10px solid black;
+  /*Aplicarle transicion  */
+  transition: border-color .5s ease-in-out;
+}
+
+
+
+
+.lista-movies li img:hover {
+  /*rgba(128,1,195, .45): el 1 sera la transparencia que se le coloca al border */
+  border: 10px solid white;
+}
